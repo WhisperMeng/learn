@@ -7,3 +7,5 @@ HashEntry在1.8中统称为Node，当Node的数量超过8个时，会自动从�
 使用内置锁synchronized代替重入锁ReentrantLock
 
 - 因为粒度降低了，两种方式性能相差不多，在粗粒度加锁中ReentrantLock可通过Condition来控制各个低粒度的边界，更加灵活。而在低粒度中，Condition没有优势
+- 基于JVM的synchronized优化空间更大，使用内嵌的关键字比使用API更加自然
+- 大数据操作下，synchronized的开销会更小，虽然不是瓶颈。
