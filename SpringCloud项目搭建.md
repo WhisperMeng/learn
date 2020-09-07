@@ -84,3 +84,26 @@ Feign的一个关键机制就是使用了动态代理。
 
 
 # SpringBootZuul 路由控制
+
+Zuul对外提供统一的服务入口，主要是用作网址重定向。还可以通过Filter实现过滤器。配合Hystrix实现熔断器，当服务宕机时可以做异常处理。
+
+  - Maven创建SpringBoot项目
+  - 配置SpringBoot项目pom.xml文件
+  - 配置SpringBoot项目application.yml文件
+  - 编写启动文件
+
+## ServiceFilter 过滤器
+
+判断了请求中是否带token，如果没有，则显示"there is no request token"
+
+## ServiceFallbackProvider 熔断器
+
+当没有服务时，显示"Sorry, the service is unavailable now."
+
+启动SpringBootZuul项目测试接口
+
+# Jenkins 自动化部署
+
+  - 将代码上传到Github或者SVN
+  - 搭建Jenkins环境
+  - 配置项目
