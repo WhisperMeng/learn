@@ -6,7 +6,7 @@
   - 编写启动文件
   
 运行Debug，执行启动文件
-使用Maven Project打包程序，创建bat文件启动服务
+使用Maven Project导出程序jar包，创建bat文件启动服务
 
 # SpringBootEureka 注册中心
 
